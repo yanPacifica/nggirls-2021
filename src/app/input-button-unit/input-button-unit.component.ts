@@ -3,10 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-input-button-unit',
   template: `
-    <input #inputElementRef
-           [value]="title"
+    <input [value]="title"
            (keyup.enter)="changeTitle($event.target.value)">
-    <button (click)="changeTitle(inputElementRef.value)">
+    <button (click)="changeTitle('Button Clicked!')">
       Save
     </button>
   `,
