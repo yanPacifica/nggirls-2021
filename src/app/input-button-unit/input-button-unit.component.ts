@@ -4,16 +4,24 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-input-button-unit',
   template: `
     <p>
-      input-button-unit works!
+      {{title}}
     </p>
   `,
   styleUrls: ['./input-button-unit.component.scss']
 })
 export class InputButtonUnitComponent implements OnInit {
 
-  constructor() { }
+  title = 'Hello World';
+
+  constructor() {
+    console.log('In constructor');
+    this.changeTitle('Ng girl Angular App');
+    console.log(this.title);
+  }
 
   ngOnInit(): void {
   }
+
+  changeTitle = (newTitle: string): void => {this.title = newTitle; };
 
 }
